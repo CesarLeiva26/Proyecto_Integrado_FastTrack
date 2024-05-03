@@ -8,17 +8,17 @@
 <nav th:replace="~{layout::menu}"></nav>
 <div class="card">
     <div class="card-header text-bg-dark mb-3 fs-4">
-        Mantenimiento de Emisores - Fast Track
+        MANTENIMIENTO DE EMISORES - FAST TRACK
     </div>
     <div class="card-body">
         <div class="d-flex justify-content-between">
             <button id="btnagregaremisor" type="button" class="btn btn-dark fs-">
-                <i class="fas fa-plus"></i> Agregar Emisor
+                <i class="fas fa-plus"></i> AGREGAR EMISOR
             </button>
             <form th:action="@{/emisor/buscarPorNombre}" method="get">
                 <div class="input-group">
                     <input type="text" placeholder="Ingresar Emisor" name="nombre" th:value="${nombre}" class="form-control">
-                    <button type="submit" class="btn btn-dark"><i class="fas fa-search"></i> Buscar</button>
+                    <button type="submit" class="btn btn-dark"><i class="fas fa-search"></i> BUSCAR</button>
                 </div>
             </form>
         </div>
@@ -27,24 +27,30 @@
         <table id="tablaemisor" class="table table-striped table-bordered text-center">
             <thead>
             <tr>
-                <th scope="col">DNI Emisor</th>
-                <th scope="col">Nombre Emisor</th>
-                <th scope="col">Apellido Emisor</th>
-                <th style="padding: 0.25rem;">Actualizar</th>
-                <th style="padding: 0.25rem;">Eliminar</th>
+                <th scope="col">DNI</th>
+                <th scope="col">NOMBRES</th>
+                <th scope="col">APELLIDOS</th>
+                <th scope="col">CELULAR</th>
+                <th scope="col">DISTRITO</th>
+                <th style="padding: 0.25rem;">ACTUALIZAR</th>
+                <th style="padding: 0.25rem;">ELIMINAR</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="emisor :${listaEmisor}">
                 <td th:text="${emisor.dniemisor}"></td>
                 <td th:text="${emisor.nombreemisor}"></td>
-                <td th:text="${emisor.apellidoemisor}   "></td>
+                <td th:text="${emisor.apellidoemisor}"></td>
+                <td th:text="${emisor.celularemisor}"></td>
+                <td th:text="${emisor.distritoemisor}"></td>
                 <td>
                     <button type="button" class="btn btn-dark btnactualizaremisor"
                             th:data-emisorid="${emisor.idemisor}"
                             th:data-emisordni="${emisor.dniemisor}"
                             th:data-emisornombre="${emisor.nombreemisor}"
-                            th:data-emisorapellido="${emisor.apellidoemisor}">
+                            th:data-emisorapellido="${emisor.apellidoemisor}"
+                            th:data-emisorcelular="${emisor.celularemisor}"
+                            th:data-emisordistrito="${emisor.distritoemisor}">
                         <i class="fas fa-edit"></i>
                     </button>
                 </td>
@@ -78,6 +84,14 @@
                 <div class="mb-3">
                     <label for="txtapellido" class="form-label">Apellido</label>
                     <input type="text" class="form-control" id="txtapellido">
+                </div>
+                <div class="mb-3">
+                    <label for="txtcelular" class="form-label">Celular</label>
+                    <input type="text" class="form-control" id="txtcelular">
+                </div>
+                <div class="mb-3">
+                    <label for="txtdistrito" class="form-label">Distrito</label>
+                    <input type="text" class="form-control" id="txtdistrito">
                 </div>
                 <input type="hidden" id="hddcodemisor" value="0">
             </div>

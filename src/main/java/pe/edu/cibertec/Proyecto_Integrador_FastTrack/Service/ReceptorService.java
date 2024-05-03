@@ -33,12 +33,16 @@ public class ReceptorService {
                 receptorExistente.setDnireceptor(receptorRequest.getDnireceptor());
                 receptorExistente.setNombrereceptor(receptorRequest.getNombrereceptor());
                 receptorExistente.setApellidoreceptor(receptorRequest.getApellidoreceptor());
+                receptorExistente.setCelularreceptor(receptorRequest.getCelularreceptor());
+                receptorExistente.setDistritoreceptor(receptorRequest.getDistritoreceptor());
                 receptorRepository.save(receptorExistente);
             } else {
                 Receptor nuevoReceptor = new Receptor();
                 nuevoReceptor.setDnireceptor(receptorRequest.getDnireceptor());
                 nuevoReceptor.setNombrereceptor(receptorRequest.getNombrereceptor());
                 nuevoReceptor.setApellidoreceptor(receptorRequest.getApellidoreceptor());
+                nuevoReceptor.setCelularreceptor(receptorRequest.getCelularreceptor());
+                nuevoReceptor.setDistritoreceptor(receptorRequest.getDistritoreceptor());
                 receptorRepository.save(nuevoReceptor);
             }
         } catch (Exception e) {

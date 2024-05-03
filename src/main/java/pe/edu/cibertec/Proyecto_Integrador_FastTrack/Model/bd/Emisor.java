@@ -20,4 +20,9 @@ public class Emisor {
     private String nombreemisor;
     @Column(name = "apellidoemisor")
     private String apellidoemisor;
+    @Column(name = "celularemisor")
+    private String celularemisor;
+    @Column(name = "distritoemisor")
+    private String distritoemisor;
+
 }

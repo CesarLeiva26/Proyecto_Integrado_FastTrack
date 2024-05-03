@@ -8,4 +8,6 @@ public class ReceptorRequest {
      private Integer dnireceptor;
      private String nombrereceptor;
      private String apellidoreceptor;
+     private String celularreceptor;
+     private String distritoreceptor;
 }

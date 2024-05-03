@@ -8,17 +8,17 @@
 <nav th:replace="~{layout::menu}"></nav>
 <div class="card">
     <div class="card-header text-bg-dark mb-3 fs-4">
-        Mantenimiento de Receptores - Fast Track
+        MANTENIMIENTO DE RECEPTORES - FAST TRACK
     </div>
     <div class="card-body">
         <div class="d-flex justify-content-between">
             <button id="btnagregar" type="button" class="btn btn-dark fs-">
-                <i class="fas fa-plus"></i> Agregar Receptor
+                <i class="fas fa-plus"></i> AGREGAR RECEPTOR
             </button>
             <form th:action="@{/receptor/buscarPorNombre}" method="get">
                 <div class="input-group">
                     <input type="text" placeholder="Ingresar Receptor" name="nombre" th:value="${nombre}" class="form-control">
-                    <button type="submit" class="btn btn-dark"><i class="fas fa-search"></i> Buscar</button>
+                    <button type="submit" class="btn btn-dark"><i class="fas fa-search"></i> BUSCAR</button>
                 </div>
             </form>
         </div>
@@ -27,11 +27,13 @@
         <table id="tablereceptor" class="table table-striped table-bordered text-center">
             <thead>
             <tr>
-                <th scope="colgroup">DNI Receptor</th>
-                <th scope="colgroup">Nombre Receptor</th>
-                <th scope="colgroup">Apellido Receptor</th>
-                <th style="padding: 0.25rem;">Actualizar</th>
-                <th style="padding: 0.25rem;">Eliminar</th>
+                <th scope="colgroup">DNI</th>
+                <th scope="colgroup">NOMBRES</th>
+                <th scope="colgroup">APELLIDOS</th>
+                <th scope="colgroup">CELULAR</th>
+                <th scope="colgroup">DISTRITO</th>
+                <th style="padding: 0.25rem;">ACTUALIZAR</th>
+                <th style="padding: 0.25rem;">ELIMINAR</th>
             </tr>
             </thead>
             <tbody>
@@ -39,12 +41,16 @@
                 <td th:text="${receptor.dnireceptor}"></td>
                 <td th:text="${receptor.nombrereceptor}"></td>
                 <td th:text="${receptor.apellidoreceptor}"></td>
+                <td th:text="${receptor.celularreceptor}"></td>
+                <td th:text="${receptor.distritoreceptor}"></td>
                 <td>
                     <button type="button" class="btn btn-dark btnactualizar"
                             th:data-receptorid="${receptor.idreceptor}"
                             th:data-receptordni="${receptor.dnireceptor}"
                             th:data-receptornombre="${receptor.nombrereceptor}"
-                            th:data-receptorapellido="${receptor.apellidoreceptor}">
+                            th:data-receptorapellido="${receptor.apellidoreceptor}"
+                            th:data-receptorcelular="${receptor.celularreceptor}"
+                            th:data-receptordistrito="${receptor.distritoreceptor}">
                         <i class="fas fa-edit"></i>
                     </button>
                 </td>
@@ -78,6 +84,14 @@
                 <div class="mb-3">
                     <label for="txtapellido" class="form-label">Apellido</label>
                     <input type="text" class="form-control" id="txtapellido">
+                </div>
+                <div class="mb-3">
+                    <label for="txtcelular" class="form-label">Celular</label>
+                    <input type="text" class="form-control" id="txtcelular">
+                </div>
+                <div class="mb-3">
+                    <label for="txtdistrito" class="form-label">Distrito</label>
+                    <input type="text" class="form-control" id="txtdistrito">
                 </div>
                 <input type="hidden" id="hddcodreceptor" value="0">
             </div>

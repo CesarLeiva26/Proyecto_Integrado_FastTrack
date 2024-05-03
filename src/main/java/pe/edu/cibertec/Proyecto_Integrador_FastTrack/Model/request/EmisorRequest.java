@@ -8,4 +8,6 @@ public class EmisorRequest {
     private Integer dniemisor;
     private String nombreemisor;
     private String apellidoemisor;
+    private String celularemisor;
+    private String distritoemisor;
 }

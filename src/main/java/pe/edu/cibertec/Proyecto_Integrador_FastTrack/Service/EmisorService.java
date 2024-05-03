@@ -33,12 +33,16 @@ public class EmisorService {
                 emisorExistente.setDniemisor(emisorRequest.getDniemisor());
                 emisorExistente.setNombreemisor(emisorRequest.getNombreemisor());
                 emisorExistente.setApellidoemisor(emisorRequest.getApellidoemisor());
+                emisorExistente.setCelularemisor(emisorRequest.getCelularemisor());
+                emisorExistente.setDistritoemisor(emisorRequest.getDistritoemisor());
                 emisorRepository.save(emisorExistente);
             } else {
                 Emisor nuevoEmisor = new Emisor();
                 nuevoEmisor.setDniemisor(emisorRequest.getDniemisor());
                 nuevoEmisor.setNombreemisor(emisorRequest.getNombreemisor());
                 nuevoEmisor.setApellidoemisor(emisorRequest.getApellidoemisor());
+                nuevoEmisor.setCelularemisor(emisorRequest.getCelularemisor());
+                nuevoEmisor.setDistritoemisor(emisorRequest.getDistritoemisor());
                 emisorRepository.save(nuevoEmisor);
             }
         } catch (Exception e) {

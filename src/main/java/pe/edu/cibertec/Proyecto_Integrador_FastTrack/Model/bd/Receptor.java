@@ -20,4 +20,8 @@ public class Receptor {
     private String nombrereceptor;
     @Column(name = "apellidoreceptor")
     private String apellidoreceptor;
+    @Column(name = "celularreceptor")
+    private String celularreceptor;
+    @Column(name = "distritoreceptor")
+    private String distritoreceptor;
 }

@@ -3,7 +3,7 @@ USE fasttrack;
 
 CREATE TABLE IF NOT EXISTS Rol (
     idrol INT AUTO_INCREMENT PRIMARY KEY,
-    nomrol VARCHAR(100) NOT NULL
+    nomrol VARCHAR(30) NOT NULL
 );
 
 insert into rol (idrol, nomrol) values
@@ -12,11 +12,11 @@ insert into rol (idrol, nomrol) values
 
 CREATE TABLE IF NOT EXISTS Usuario (
     idusuario INT AUTO_INCREMENT PRIMARY KEY,
-    nombres VARCHAR(100),
-    apellidos VARCHAR(100),
-    email VARCHAR(200),
-    nomusuario VARCHAR(100) NOT NULL,
-    password VARCHAR(300) NOT NULL,
+    nombres VARCHAR(30),
+    apellidos VARCHAR(30),
+    email VARCHAR(30),
+    nomusuario VARCHAR(30) NOT NULL,
+    password VARCHAR(30) NOT NULL,
     activo BOOLEAN
 );
 
@@ -31,20 +31,24 @@ CREATE TABLE IF NOT EXISTS Usuario_Rol (
 CREATE TABLE IF NOT EXISTS Emisor (
     idemisor INT AUTO_INCREMENT PRIMARY KEY,
     dniemisor int,
-    nombreemisor VARCHAR(100) NOT NULL,
-    apellidoemisor VARCHAR(100) NOT NULL
+    nombreemisor VARCHAR(30) NOT NULL,
+    apellidoemisor VARCHAR(30) NOT NULL,
+    celularemisor VARCHAR(30) NOT NULL,
+    distritoemisor VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Receptor (
     idreceptor INT AUTO_INCREMENT PRIMARY KEY,
     dnireceptor int,
-    nombrereceptor VARCHAR(100),
-    apellidoreceptor VARCHAR(100)
+    nombrereceptor VARCHAR(30),
+    apellidoreceptor VARCHAR(30),
+    celularreceptor VARCHAR(30),
+    distritoreceptor VARCHAR(30)
 );
 
 CREATE TABLE IF NOT EXISTS tipoestadosorden (
     idestadoorden INT AUTO_INCREMENT PRIMARY KEY,
-    nombreestado VARCHAR(50) NOT NULL
+    nombreestado VARCHAR(30) NOT NULL
 );
 
 INSERT INTO tipoestadosorden (nombreestado)
@@ -56,9 +60,9 @@ VALUES
 
 CREATE TABLE IF NOT EXISTS vehiculos (
     idvehiculo INT AUTO_INCREMENT PRIMARY KEY,
-    placa VARCHAR(20) NOT NULL,
-    marca VARCHAR(50) NOT NULL,
-    modelo VARCHAR(50) NOT NULL
+    placa VARCHAR(30) NOT NULL,
+    marca VARCHAR(30) NOT NULL,
+    modelo VARCHAR(30) NOT NULL
 );
 
 INSERT INTO vehiculos (placa, marca, modelo)
@@ -69,9 +73,9 @@ VALUES
 
 CREATE TABLE IF NOT EXISTS locales (
     idlocal INT AUTO_INCREMENT PRIMARY KEY,
-    nombrelocal VARCHAR(255),
-    direccionlocal VARCHAR(255),
-    ciudadlocal VARCHAR(100)
+    nombrelocal VARCHAR(30),
+    direccionlocal VARCHAR(30),
+    ciudadlocal VARCHAR(30)
 );
 
 INSERT INTO locales (idlocal ,nombrelocal, direccionlocal, ciudadlocal)
@@ -93,7 +97,7 @@ CREATE TABLE IF NOT EXISTS ordenes (
     idestadoorden INT,
     idreceptor INT,
     idvehiculo INT,
-    claveorden varchar(50),
+    claveorden varchar(30),
     FOREIGN KEY (idlocal) REFERENCES locales(idlocal),
     FOREIGN KEY (idemisor) REFERENCES Emisor(idemisor),
     FOREIGN KEY (idreceptor) REFERENCES Receptor(idreceptor),

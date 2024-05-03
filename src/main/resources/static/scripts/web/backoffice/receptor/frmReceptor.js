@@ -2,6 +2,8 @@ $(document).on("click", "#btnagregar", function(){
     $("#txtdni").val("");
     $("#txtnombre").val("");
     $("#txtapellido").val("");
+    $("#txtcelular").val("");
+    $("#txtdistrito").val("");
     $("#hddcodreceptor").val("0");
     $("#modalNuevo").modal("show");
 });
@@ -10,6 +12,8 @@ $(document).on("click", ".btnactualizar", function(){
     $("#txtdni").val($(this).attr("data-receptordni"));
     $("#txtnombre").val($(this).attr("data-receptornombre"));
     $("#txtapellido").val($(this).attr("data-receptorapellido"));
+    $("#txtcelular").val($(this).attr("data-receptorcelular"));
+    $("#txtdistrito").val($(this).attr("data-receptordistrito"))
     $("#hddcodreceptor").val($(this).attr("data-receptorid"));
     $("#modalNuevo").modal("show");
 });
@@ -24,7 +28,9 @@ $(document).on("click", "#btnguardar", function(){
                 idreceptor: $("#hddcodreceptor").val(),
                 dnireceptor: $("#txtdni").val(),
                 nombrereceptor: $("#txtnombre").val(),
-                apellidoreceptor: $("#txtapellido").val()
+                apellidoreceptor: $("#txtapellido").val(),
+                celularreceptor: $("#txtcelular").val(),
+                distritoreceptor: $("#txtdistrito").val()
             }),
             success: function(resultado){
                 if(resultado.respuesta){
@@ -69,6 +75,14 @@ function validarCampos() {
         $("#txtapellido").after('<div class="error-message text-warning">El Apellido del Receptor es obligatorio</div>');
         isValid = false;
     }
+    if ($("#txtcelular").val() === "") {
+        $("#txtcelular").after('<div class="error-message text-warning">El Celular del Receptor es obligatorio</div>');
+        isValid = false;
+    }
+    if ($("#txtdistrito").val() === "") {
+        $("#txtdistrito").after('<div class="error-message text-warning">El Distrito del Receptor es obligatorio</div>');
+        isValid = false;
+    }
     return isValid;
 }
 
@@ -84,11 +98,15 @@ function listarReceptores(){
                     "<td>"+value.dnireceptor+"</td>"+
                     "<td>"+value.nombrereceptor+"</td>"+
                     "<td>"+value.apellidoreceptor+"</td>"+
+                    "<td>"+value.celularreceptor+"</td>"+
+                    "<td>"+value.distritoreceptor+"</td>"+
                     "<td>"+
                         "<button type='button' class='btn btn-dark btnactualizar'"+
                         "data-receptordni='" + value.dnireceptor+"'"+
                         "data-receptornombre=' " + value.nombrereceptor+"'"+
                         "data-receptorapellido='"+value.apellidoreceptor+"'"+
+                        "data-receptorcelular='"+value.celularreceptor+"'"+
+                        "data-receptordistrito='"+value.distritoreceptor+"'"+
                         "><i class='fas fa-edit'></i></button></td>"+
                         "<td>"+
                         "<button type='button' class='btn btn-danger btneliminarreceptor'"+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout::head}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastrack- Tu socio de confianza en envíos</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link th:href="@{/styles/fontawesome/all.css}" rel="stylesheet"/>
+    <link rel="icon" href="img/envios.png">
+</head>
+<body>
+<nav th:replace="~{layout::menu}"></nav>
+<h3 style="font-size: 45px; font-weight: bold;">Bienvenido a Fast-Track</h3><br>
+<h4 class="welcome-text">Tu socio de confianza en envíos</h4>
+
+<img th:src="@{/img/envios.png}" alt="Envíos Express" title="Envíos Express" width="75%" height="400px">
+<article>
+    <section>
+        <h2>Nuestros Servicios de Envío</h2>
+        <p>Somos una empresa de envíos dedicada a proporcionar soluciones logísticas confiables y eficientes. Ofrecemos una amplia gama de servicios de envío, desde envíos nacionales hasta envíos internacionales.</p>
+    </section>
+    <section>
+        <h2>Seguimiento en Tiempo Real</h2>
+        <p>Con Envíos Express, puedes realizar un seguimiento en tiempo real de tus paquetes. Utilizamos tecnología avanzada para que siempre estés informado sobre la ubicación y el estado de tus envíos.</p>
+    </section>
+    <section>
+        <h2>Envío Rápido y Seguro</h2>
+        <p>Nuestra prioridad es entregar tus productos de manera rápida y segura. Trabajamos con profesionales que cuidan tus envíos y garantizamos que lleguen a su destino en perfectas condiciones.</p>
+    </section>
+</article>
+<aside>
+    <h2>Contacto</h2>
+    <p>Si deseas obtener más información sobre nuestros servicios o realizar un envío, no dudes en contactarnos.</p>
+    <a href="tel:+123456789">Llámanos: 996-989-595</a>
+    <a href="mailto:info@enviosexpress.com">Email: fastrack@enviosexpress.com</a>
+</aside>
+<footer>
+    <h4>Envíos Express - Todos los derechos reservados</h4>
+    <a href="https://www.facebook.com/enviosexpress"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/enviosexpress"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/company/enviosexpress"><i class="fab fa-whatsapp"></i></a>
+</footer>
+</body>
+</html>

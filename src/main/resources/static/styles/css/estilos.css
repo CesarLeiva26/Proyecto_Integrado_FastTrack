@@ -1,0 +1,81 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and font for the entire page */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Style the main content */
+h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+article {
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style the aside */
+aside {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style footer links */
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+/* Add hover effect to footer links */
+footer a:hover {
+    text-decoration: underline;
+}

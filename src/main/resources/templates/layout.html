@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>Fastrack- Tu socio de confianza en envíos</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link th:href="@{/styles/fontawesome/all.css}" rel="stylesheet"/>
+    <link rel="icon" href="img/envios.png">
+    <link rel="stylesheet" type="text/css" th:href="@{/styles/css/estilos.css}">
+    <link rel="icon" th:href="@{img/imagen.png}">
+    <link th:href="@{/styles/bootstrap/bootstrap.min.css}"
+          rel="stylesheet"/>
+    <link th:href="@{/styles/fontawesome/all.css}"
+          rel="stylesheet"/>
+    <script th:src="@{/scripts/web/backoffice/receptor/frmReceptor.js}" type="text/javascript"></script>
+    <script th:src="@{/scripts/bootstrap/bootstrap.bundle.js}"
+            type="text/javascript"></script>
+    <script th:src="@{/scripts/jquery/jquery.js}"
+            type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        nav ul li a {
+            font-size: 30px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<header  th:fragment="menu">
+    <nav>
+        <ul>
+            <li>
+                <a th:href="@{/home}"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+                <a th:href="@{/locales}"><i class="fas fa-map-marked-alt"></i> Locales</a>
+            </li>
+            <li>
+                <a th:href="@{/emisor}"><i class="fas fa-users"></i> Emisor</a>
+            </li>
+            <li>
+                <a th:href="@{/receptor}"><i class="fas fa-users"></i> Receptor</a>
+            </li>
+            <li>
+                <a th:href="@{/orden}"><i class="fas fa-sort-amount-up-alt"></i> Ordenes</a>
+            </li>
+            <li>
+                <a th:href="@{/auth/logout}" class="logout-link"><i class="fas fa-sign-in-alt"></i> Cerrar Sesión</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Fastrack - Mantenimiento de Emisores</title>
 </head>
-<body>
+<body class="bg-dark">
 <nav th:replace="~{layout::menu}"></nav>
 <div class="card">
     <div class="card-header text-bg-dark mb-3 fs-4">
@@ -25,7 +25,7 @@
         <hr />
         <div id="mensaje"></div>
         <table id="tablaemisor" class="table table-striped table-bordered text-center">
-            <thead>
+            <thead class="bg-dark text-white">
             <tr>
                 <th scope="col">DNI</th>
                 <th scope="col">NOMBRES</th>
@@ -38,13 +38,13 @@
             </thead>
             <tbody>
             <tr th:each="emisor :${listaEmisor}">
-                <td th:text="${emisor.dniemisor}"></td>
-                <td th:text="${emisor.nombreemisor}"></td>
-                <td th:text="${emisor.apellidoemisor}"></td>
-                <td th:text="${emisor.celularemisor}"></td>
-                <td th:text="${emisor.distritoemisor}"></td>
-                <td>
-                    <button type="button" class="btn btn-dark btnactualizaremisor"
+                <td class="bg-dark text-white fw-bold" th:text="${emisor.dniemisor}"></td>
+                <td class="bg-dark text-white fw-bold" th:text="${emisor.nombreemisor}"></td>
+                <td class="bg-dark text-white fw-bold" th:text="${emisor.apellidoemisor}"></td>
+                <td class="bg-dark text-white fw-bold" th:text="${emisor.celularemisor}"></td>
+                <td class="bg-dark text-white fw-bold" th:text="${emisor.distritoemisor}"></td>
+                <td class="bg-dark text-white fw-bold">
+                    <button type="button" class="btn btn-danger btnactualizaremisor"
                             th:data-emisorid="${emisor.idemisor}"
                             th:data-emisordni="${emisor.dniemisor}"
                             th:data-emisornombre="${emisor.nombreemisor}"
@@ -54,7 +54,7 @@
                         <i class="fas fa-edit"></i>
                     </button>
                 </td>
-                <td>
+                <td class="bg-dark text-white fw-bold">
                     <button type="button" class="btn btn-danger btneliminaremisor"
                             th:data-emisorid="${emisor.idemisor}">
                         <i class="fas fa-trash-alt"></i>

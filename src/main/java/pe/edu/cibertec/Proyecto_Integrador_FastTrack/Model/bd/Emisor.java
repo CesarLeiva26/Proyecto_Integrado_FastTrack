@@ -14,13 +14,13 @@ public class Emisor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idemisor;
-    @Column(name = "dniemisor")
+    @Column(name = "dniemisor", unique = true)
     private Integer dniemisor;
     @Column(name = "nombreemisor")
     private String nombreemisor;
     @Column(name = "apellidoemisor")
     private String apellidoemisor;
-    @Column(name = "celularemisor")
+    @Column(name = "celularemisor", unique = true)
     private String celularemisor;
     @Column(name = "distritoemisor")
     private String distritoemisor;

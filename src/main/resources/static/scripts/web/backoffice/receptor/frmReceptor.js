@@ -39,6 +39,7 @@ $(document).on("click", "#btnguardar", function(){
                         icon: 'success',
                         title: 'Éxito',
                         text: resultado.mensaje,
+                        confirmButtonColor: '#000000',
                         confirmButtonText: 'Aceptar'
                     }).then((result) => {
                         location.reload();
@@ -48,6 +49,7 @@ $(document).on("click", "#btnguardar", function(){
                         icon: 'error',
                         title: 'Error',
                         text: resultado.mensaje,
+                        confirmButtonColor: '#000000',
                         confirmButtonText: 'Aceptar'
                     });
                 }

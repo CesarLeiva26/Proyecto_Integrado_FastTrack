@@ -14,13 +14,13 @@ public class Receptor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idreceptor;
-    @Column(name = "dnireceptor")
+    @Column(name = "dnireceptor", unique = true)
     private Integer dnireceptor;
     @Column(name = "nombrereceptor")
     private String nombrereceptor;
     @Column(name = "apellidoreceptor")
     private String apellidoreceptor;
-    @Column(name = "celularreceptor")
+    @Column(name = "celularreceptor", unique = true)
     private String celularreceptor;
     @Column(name = "distritoreceptor")
     private String distritoreceptor;

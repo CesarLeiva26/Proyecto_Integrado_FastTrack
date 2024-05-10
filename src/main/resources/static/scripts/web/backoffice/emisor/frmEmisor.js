@@ -130,7 +130,7 @@ $(document).on("click", "#btneliminaremisor", function(){
         }),
         success: function(resultado){
             Swal.fire({
-                icon: 'dark',
+                icon: 'success',
                 title: 'Éxito',
                 text: resultado.mensaje,
                 confirmButtonText: 'Aceptar'

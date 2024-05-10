@@ -65,17 +65,17 @@ function validarCamposLocales() {
     var isValid = true;
 
     if ($("#txtnombrelocal").val() === "") {
-        $("#txtnombrelocal").after('<div class="error-message text-warning">El Nombre del Local es obligatorio</div>');
+        $("#txtnombrelocal").after('<div class="error-message text-warning">El Nombre del Local es obligatorio   <br> Longitud máxima de 30 caracteres  </div>');
         isValid = false;
     }
 
     if ($("#txtdireccionlocal").val() === "") {
-        $("#txtdireccionlocal").after('<div class="error-message text-warning">La Dirección del Local es obligatoria</div>');
+        $("#txtdireccionlocal").after('<div class="error-message text-warning">La Dirección del Local es obligatoria   <br> Longitud máxima de 30 caracteres  </div>');
         isValid = false;
     }
 
     if ($("#txtciudadlocal").val() === "") {
-        $("#txtciudadlocal").after('<div class="error-message text-warning">La Ciudad del Local es obligatoria</div>');
+        $("#txtciudadlocal").after('<div class="error-message text-warning">La Ciudad del Local es obligatoria   <br> Longitud máxima de 30 caracteres  </div>');
         isValid = false;
     }
     return isValid;

@@ -64,25 +64,25 @@ function validarCampos() {
     var isValid = true;
 
     if ($("#txtdni").val() === "") {
-            $("#txtdni").after('<div class="error-message text-warning">El DNI del Receptor es obligatorio</div>');
+            $("#txtdni").after('<div class="error-message text-warning">El DNI del Receptor es obligatorio   <br> Longitud máxima de 8 caracteres  </div>');
             isValid = false;
     }
 
     if ($("#txtnombre").val() === "") {
-           $("#txtnombre").after('<div class="error-message text-warning">El Nombre del Receptor es obligatorio</div>');
+           $("#txtnombre").after('<div class="error-message text-warning">El Nombre del Receptor es obligatorio   <br> Longitud máxima de 30 caracteres  </div>');
            isValid = false;
     }
 
     if ($("#txtapellido").val() === "") {
-        $("#txtapellido").after('<div class="error-message text-warning">El Apellido del Receptor es obligatorio</div>');
+        $("#txtapellido").after('<div class="error-message text-warning">El Apellido del Receptor es obligatorio   <br> Longitud máxima de 30 caracteres  </div>');
         isValid = false;
     }
     if ($("#txtcelular").val() === "") {
-        $("#txtcelular").after('<div class="error-message text-warning">El Celular del Receptor es obligatorio</div>');
+        $("#txtcelular").after('<div class="error-message text-warning">El Celular del Receptor es obligatorio   <br> Longitud máxima de 30 caracteres  </div>');
         isValid = false;
     }
     if ($("#txtdistrito").val() === "") {
-        $("#txtdistrito").after('<div class="error-message text-warning">El Distrito del Receptor es obligatorio</div>');
+        $("#txtdistrito").after('<div class="error-message text-warning">El Distrito del Receptor es obligatorio   <br> Longitud máxima de 30 caracteres  </div>');
         isValid = false;
     }
     return isValid;

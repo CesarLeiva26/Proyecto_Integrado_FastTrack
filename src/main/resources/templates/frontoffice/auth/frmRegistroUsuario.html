@@ -20,9 +20,9 @@
     }
   </style>
 </head>
-<body>
-<div class="center-form">
-  <div class="card form-container">
+<body style="background-color:black;">
+<div style="background-color:black;" class="center-form">
+  <div style="padding:40px; width:50%" class="card form-container">
     <div class="card-header bg-dark text-light fs-5 text-center">
       REGISTRO DE USUARIO
     </div>
@@ -49,11 +49,12 @@
           <label for="password" class="form-label">Contraseña</label>
           <input type="password" class="form-control" name="password"  required id="password">
         </div>
-
-        <a class="btn btn-dark" th:href="@{/auth/login}" role="button">REGRESAR AL LOGIN</a>
+        <div class="text-center">
+        <a class="btn btn-dark" th:href="@{/auth/login}" role="button"><i class="fas fa-sign-in-alt"></i> REGRESAR</a>
         <button type="submit" id="btnregistrar" class="btn btn-dark">
           <i class="fas fa-save"></i> GUARDAR
         </button>
+        </div>
       </form>
     </div>
   </div>

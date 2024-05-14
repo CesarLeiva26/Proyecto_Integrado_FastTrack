@@ -20,13 +20,17 @@
         align-items: center;
     }
   .card {
-        width: 400px;
+        width: 80%;
         padding: 20px;
+        padding: 100px
     }
 
     .form-control {
         font-size: 18px;
         padding: 10px;
+    }
+    input{
+        padding:50px;
     }
 </style>
 <body style="background-color:black;">
@@ -37,12 +41,12 @@
     <div class="card-body">
         <form th:action="@{/auth/login}" method="post">
             <div class="mb-3">
-                <label for="nomusuario" class="form-label">Usuario</label>
-                <input type="text" class="form-control" name="nomusuario" id="nomusuario">
+            <label for="nomusuario" class="form-label">Usuario</label>
+            <input type="text" class="form-control" name="nomusuario" id="nomusuario" maxlength="30"><br>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" name="password" id="password">
+                <input type="password" class="form-control" name="password" id="password" maxlength="30">
             </div>
             <div th:if="${param.error}" class="text-center">
                 <p class="text-dark">Nombre de usuario y/o <br> contraseña incorrectos.</p>
